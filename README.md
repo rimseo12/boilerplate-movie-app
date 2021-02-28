@@ -1,4 +1,4 @@
-##Movie App
+# Movie App
 
 The Movie DB 라는 곳에서 제공하는 API를 이용하여 영화 사이트를 만들었습니다.
 
