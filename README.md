@@ -1,10 +1,6 @@
+# Movie App
 
-To use this application, 
-
-1. make dev.js file inside config folder 
-2. put mongoDB info into dev.js file 
-3. Type  " npm install " inside the root directory  ( Download Server Dependencies ) 
-4. Type " npm install " inside the client directory ( Download Front-end Dependencies )
+The Movie DB 라는 곳에서 제공하는 API를 이용하여 영화 사이트를 만들었습니다.
 
 
 참고 강의:
