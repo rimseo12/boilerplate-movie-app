@@ -3,6 +3,7 @@ import { API_KEY, API_URL, IMAGE_BASE_URL } from '../../Config'
 import MainImage from '../LandingPage/Sections/MainImage'
 import MovieInfo from './Sections/MovieInfo'
 import GridCard from '../commons/GridCard'
+import Favorite from './Sections/Favorite'
 import { Row } from 'antd'
 
 function MovieDetail(props) {

@@ -32,21 +32,21 @@ function Favorite(props) {
 
         Axios.post('/api/favorite/favorited', variables)
             .then(res => {
-                if(res.data.success){
-                    console.log("favorited"+res.data)
+                if (res.data.success) {
+                    console.log("favorited" + res.data)
                     setFavorited(res.data.favorited)
                 } else {
                     alert('정보를 가져오는데 실패 했습니다.')
                 }
-            })    
+            })
 
     }, [])
-    
+
     const onClickFavorite = () => {
-        if(Favorited){
-             Axios.post('/api/favorite/removeFromFavorite', variables)
+        if (Favorited) {
+            Axios.post('/api/favorite/removeFromFavorite', variables)
                 .then(res => {
-                    if(res.data.success){
+                    if (res.data.success) {
                         setFavoriteNumber(FavoriteNumber - 1)
                         setFavorited(!Favorited)
                     } else {
@@ -55,20 +55,20 @@ function Favorite(props) {
                 })
         } else {
             Axios.post('/api/favorite/addToFavorite', variables)
-            .then(res => {
-                if(res.data.success){
-                    setFavoriteNumber(FavoriteNumber + 1)
-                    setFavorited(!Favorited)
-                } else {
-                    alert("favorite list에서 추가하는 걸 실패했습니다.")
-                }
-            })
+                .then(res => {
+                    if (res.data.success) {
+                        setFavoriteNumber(FavoriteNumber + 1)
+                        setFavorited(!Favorited)
+                    } else {
+                        alert("favorite list에서 추가하는 걸 실패했습니다.")
+                    }
+                })
         }
     }
 
     return (
         <div>
-            <Button onClick={onClickFavorite}>{Favorited? "Not Favorite" : "Add to Favorite"} {FavoriteNumber}</Button>
+            <Button onClick={onClickFavorite}>{Favorited ? "Not Favorite" : "Add to Favorite"} {FavoriteNumber}</Button>
         </div>
 
 
