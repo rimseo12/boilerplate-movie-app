@@ -28,7 +28,6 @@ function MovieDetail(props) {
         fetch(endpointCrew)
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 setCasts(res.cast)
               
             })
@@ -54,7 +53,9 @@ function MovieDetail(props) {
 
             {/* Body */}
             <div style={{ width: '80%', margin: '1rem auto' }}>
-
+                <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                     <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
+                </div>
                 {/* Movie Info */}
                 <MovieInfo
                     movie={Movie}
